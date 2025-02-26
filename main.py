@@ -12,10 +12,15 @@ def index():
         selected_image = request.form.get('image-selector')
 
         # Asignación #2. Recepción del texto
-        
+        text_top = request.form.get('textTop')
+
+        text_bottom = request.form.get('textBottom')
+
 
         # Assignment #3. Receiving the text's positioning
-       
+        text_top_y = request.form.get('textTop_y')
+        text_bottom_y = request.form.get('textBottom_y')
+        selected_color = request.form.get('color_selector')
 
         # Asignación #3. Recepción del posicionamiento del texto
         
@@ -25,14 +30,17 @@ def index():
                                selected_image=selected_image, 
 
                                # Asignación #2. Visualización del texto
+                                text_top = text_top,
+                                text_bottom = text_bottom,
+                                
+
                                
 
                                #  Asignación #3. Visualización del color
-                               
-                               
+                                selected_color = selected_color,
                                # Asignación #3. Visualización de la posición del texto
-
-
+                                text_top_y = text_top_y,
+                                text_bottom_y = text_bottom_y
                                )
     else:
         # Mostrar la primera imagen por defecto
